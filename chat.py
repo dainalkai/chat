@@ -19,7 +19,7 @@ def read_file(filename):
 def write_file(outputfile, chat):
 	with open(outputfile, 'w', encoding='utf-8') as f:
 		for p in chat:
-			f.write(str(p[0]) + ': ' + p[1] + '\n')
+			f.write(p[0] + ': ' + p[1] + '\n')
 
 def main():
 	filename = '075 input.txt'
