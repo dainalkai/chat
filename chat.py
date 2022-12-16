@@ -3,7 +3,7 @@ import os
 #讀取檔案
 def read_file(filename):
 	chat = []
-	name = []
+	name = None
 	with open(filename, 'r', encoding='utf-8-sig') as f:
 		for line in f:
 			if 'Allen' in line:
@@ -11,8 +11,9 @@ def read_file(filename):
 				continue # 繼續
 			elif 'Tom' in line:
 				name = line.strip()
-				continue	
-			chat.append([name, line])	
+				continue
+			if name:		
+				chat.append([name, line])	
 	return chat
 
 #寫入檔案
