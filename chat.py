@@ -12,8 +12,7 @@ def read_file(filename):
 			elif 'Tom' in line:
 				name = line.strip()
 				continue	
-			chat.append([name, line])
-	print(chat)		
+			chat.append([name, line])	
 	return chat
 
 #寫入檔案
