@@ -4,7 +4,7 @@ import os
 def read_file(filename):
 	chat = []
 	name = []
-	with open(filename, 'r', encoding='utf-8') as f:
+	with open(filename, 'r', encoding='utf-8-sig') as f:
 		for line in f:
 			if 'Allen' in line:
 				name = line.strip()
@@ -19,7 +19,7 @@ def read_file(filename):
 def write_file(outputfile, chat):
 	with open(outputfile, 'w', encoding='utf-8') as f:
 		for p in chat:
-			f.write(p[0] + ': ' + p[1] + '\n')
+			f.write(p[0] + ': ' + p[1] )
 
 def main():
 	filename = '075 input.txt'
